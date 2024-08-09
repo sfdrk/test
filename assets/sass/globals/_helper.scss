@@ -1,0 +1,238 @@
+@use "../utilities" as u;
+
+
+.pdg{
+    // padding: clamp(1rem, 0.6585rem + 1.9512vw, 3rem) 0;
+    padding: clamp(3.75rem, 2.8963rem + 4.878vw, 8.75rem) 0;
+}
+
+.align-items-start{
+    align-items: start !important;
+}
+
+.text-align-end{
+    text-align: end;
+}
+
+.text-align-start{
+    text-align: start;
+}
+
+// .after::after{
+//     content:"";
+//     height:1px;
+//     width:100px;
+//     background-color: #000;
+//     display: block;
+//     right: -25%;
+//     position: absolute;
+//     top: 50%;
+// }
+
+// .before::before{
+//     content:"";
+//     height:1px;
+//     width:100px;
+//     background-color: #000;
+//     display: block;
+//     left: -25%;
+//     position: absolute;
+//     top: 50%;
+// }
+
+.end{
+    justify-content: end;
+}
+
+.landing-video{
+    width:70%;
+}
+
+label{
+    display:none !important;
+}
+
+.swiper-pagination-bullet{
+    height: 15px;
+  width: 15px;
+  border-radius: 0;
+//   background-color: #fff;
+//   background: rgb(170, 122, 25);
+  background: rgb(197, 174, 128);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+//   background-color: #000;
+  background-color: #fff;
+}
+
+.right-arrow{
+    transition: .3s all;
+    // width:400px !important;
+}
+
+.download-btn:hover .right-arrow{
+    transform: translateX(5px);
+}
+
+
+
+
+
+.swiper-pagination{
+    @include u.breakpoint-max(small){
+        bottom:5% !important;
+    }
+}
+
+.slide{
+    left:0 !important;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+}
+
+.bg-cl{
+    background-color: #000 !important;
+}
+
+.shadow{
+    box-shadow: 0 0 3px #e0e0e0;
+}
+
+.hero-project-block{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    color:white;
+    z-index: 5;
+    // @include u.breakpoint-max(small){
+    //     bottom:14%;
+    // }
+    .sale-block{
+        display:flex;
+        gap:20px;
+        align-items: center;
+        margin-bottom:10px;
+        .onsale{
+            padding:5px 16px;
+            border: 1px solid #fff;
+            width:100%;
+            max-width: 120px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .location{
+            display:flex;
+            gap:5px;
+            align-items: center;
+            @include u.breakpoint-max(small){
+                font-size: 14px;
+            }
+        }
+    }
+  
+    .project-head{
+        font-family: u.$ivy-mode;
+        // font-size: 66px;
+        font-size: clamp(2.25rem, 1.9299rem + 1.8293vw, 4.125rem);
+        margin-bottom: 12px;
+        // text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+        // 0px 8px 13px rgba(0,0,0,0.1),
+        // 0px 18px 23px rgba(0,0,0,0.1);
+        @include u.breakpoint-max(small){
+            font-size: 34px;
+        }
+    }
+    .project-sub-head{
+        font-size: 22px;
+        max-width: 800px;
+        width:100%;
+        // margin-inline: auto;
+        @include u.breakpoint-max(small){
+            font-size: 16px;
+        }
+    }
+    .hero-project-btn{
+        margin-top:30px;
+        a{
+            max-width: 200px;
+            width:100%;
+            padding: 15px 15px;
+            // background-color: #fff;
+            // background: rgb(197, 174, 128);
+            background-color: #FA871C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#fff;
+            font-size: 15px;
+            transition: .2s all;
+            @include u.breakpoint-max(small){
+                max-width: 100%;
+            }
+            &:hover{
+                background: rgb(170, 122, 25);
+            }
+        }
+    }
+}
+
+
+
+.align-end{
+    display:flex;
+    flex-direction: column;
+    align-items: end;
+    @include u.breakpoint-max(medium){
+        align-items: start;
+    }
+}
+
+
+.fade-left{
+    transform: translateZ(0) !important;
+}
+
+
+.mx{
+    max-width: 900px !important;
+    width:55% !important;
+    margin-inline: auto !important;
+    @include u.breakpoint-max(medium){
+        width:100% !important;
+    }
+}
+
+.b311-slide{
+    img{
+        max-width: 450px;
+        height: 252px;
+        width: 100%;
+        // height:100%;
+        object-fit: cover;
+    }
+}
+
+
+// .video-container{
+//     position: relative;
+//     width: 100%;
+//     height: 100vh; /* Full viewport height */
+//     overflow: hidden;
+//     .main-intro-video{
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         width: auto;
+//         height: 100%;
+//         transform: translate(-50%, -50%);
+//         object-fit: cover;
+//     }
+// }

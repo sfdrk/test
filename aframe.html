@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    
+
+    <a class="header360" href="./index.html#fullView">
+      <i class="fa-solid fa-arrow-left"></i>BACK TO 360
+    </a>
+    
+    <div class="side-block">
+        <div class="home">
+            <div id="showHome" class="bl"><i class="fa-solid fa-house sd-icon"></i></div>
+        </div>
+        <div class="googleMap">
+            <div id="showGoogleMap" class="bl"><i class="fa-solid fa-location-dot sd-icon"></i></div>
+        </div>
+        <div class="siteMap">
+            <div id="showSiteMap" class="bl"><i class="fa-solid fa-map sd-icon"></i></div>
+        </div>
+    </div>
+        <div class="full-view-container active">
+        <a-scene  id="scene">
+            <a-sky src="./assets/images/panorama.jpg" rotation="0 -130 0"></a-sky>
+            <a-camera id="camera" position="0 1.6 0" fov="75"></a-camera>
+        </a-scene>
+        </div>
+        <div class="site-map">
+            <img src="./assets/images/map.jpg">
+        </div>
+        <div class="responsive-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.7806761080233!2d-93.29138368446431!3d44.96844997909819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b32b6ee2c87c91%3A0xc20dff2748d2bd92!2sWalker+Art+Center!5e0!3m2!1sen!2sus!4v1514524647889" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+
+
+        <div class="bottom-block">
+            <!-- <a href="./"> -->
+              <a href="./"><img src="./assets/images/logos/logoblackv1.svg" alt="logo"></a>
+            <!-- </a> -->
+        </div>
+
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+  <script>
+
+
+document.addEventListener('wheel', (event) => {
+      // Prevent the default scroll behavior
+      event.preventDefault();
+
+      const camera = document.querySelector('#camera');
+      let fov = camera.getAttribute('fov');
+
+      // Determine the zoom direction and adjust the FOV
+      if (event.deltaY < 0) {
+        // Zoom in (scroll up)
+        fov = Math.max(30, fov - 5);
+      } else {
+        // Zoom out (scroll down)
+        fov = Math.min(100, fov + 5);
+      }
+
+      // Set the new FOV value
+      camera.setAttribute('fov', fov);
+    });
+
+  </script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+      <script src="./assets/js/aos.js"></script>
+      <script src="./assets/js/ScrollTrigger.js"></script>
+      <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+      <script src="./assets/js/jquery.js"></script>
+      <script src="./assets/js/script.js"></script>
+</body>
+</html>

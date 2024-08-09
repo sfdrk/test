@@ -1,0 +1,128 @@
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+.swiper {
+    width: 100%;
+    height: 85vh;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .container{
+    max-width: 1120px;
+    width:100%;
+    margin:0 auto;
+    padding:0px 30px;
+  }
+
+  .fluid-container{}
+
+  li{
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  ul{
+    display:flex;
+  }
+  
+  header{
+    padding:15px 0px;
+  }
+
+  .logo img{
+    max-width: 140px;
+    width:100%;
+  }
+
+  .swiper-button-next , .swiper-button-prev{
+    background: rgba(0,0,0,.5);
+    padding:5px 10px;
+  }
+
+  .swiper-button-next{
+    right:0;
+  }
+
+  .swiper-button-prev{
+    left:0;
+  }
+
+  .swiper-button-prev::after , .swiper-button-next::after{
+    font-size: 26px;
+    color: #fff;
+  }
+ 
+  .landing-text-wrapper{
+    background: rgba(0,0,0,.5);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .text-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    height: auto;
+    min-height: 110px;
+  }
+
+  .text-wrapper h1{
+    font-size: 28px;
+  }
+
+  .discover-btn{
+    /* background-color: #F15A24; */
+    /* margin:auto auto; */
+
+    color:#fff;
+
+  }
+  
+  .discover-btn{
+    background-image: linear-gradient(133deg,#F15A24,#fc7a4b);
+    height: 38px;
+    text-align: center;
+    width: 197px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s all;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .discover-btn:hover{
+    background-color: #000;
+  }
