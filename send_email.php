@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $action = $_POST['action'];
 
     // Always send email with the form data
-    $to = "your-email@example.com"; // Replace with the actual recipient's email address
+    $to = "safdar.dxb070@gmail.com"; // Replace with the actual recipient's email address
     $subject = "New Contact Form Submission";
     $message = "Name: $name\nEmail: $email\nPhone: $phone";
     $headers = "From: $email";
