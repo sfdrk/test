@@ -1,12 +1,6 @@
 
 
-
-
-
-
 AOS.init();
-
-
 
 var swiper = new Swiper(".mySwiper", {
     speed: 1300,  
