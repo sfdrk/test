@@ -514,6 +514,27 @@ main{
     }
     .third-section{
         // text-align: center;
+        .project-heading{
+            font-family: u.$ivy-mode;
+            text-align: center;
+            font-size: 36px;
+            max-width: 800px;
+            margin-inline: auto;
+            color: #222121;
+            font-weight: 400;
+            span{
+                font-weight: bold;
+                color: rgb(197, 174, 128);;
+            }
+        }
+        .project-content{
+            max-width: 1100px;
+            line-height: 26px;
+            margin-inline: auto;
+            margin-top: 30px;
+            color: rgb(126, 125, 125);
+            text-align: center;
+        }
         .third-title{
             font-size: 22px;
             letter-spacing: 2px;
@@ -572,7 +593,7 @@ main{
                     p:nth-child(2){
                         // font-size: 34px;
                         font-size: clamp(1.625rem, 1.5183rem + 0.6098vw, 2.25rem);
-                        font-weight: 700;
+                        font-weight: 400;
                         margin-bottom: 24px;
                         font-family: u.$ivy-mode;
                         @include u.breakpoint-max(small){
@@ -629,6 +650,34 @@ main{
                     // flex: 1;
                 }
             }
+           
+        }
+        .view-projects{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap:10px;
+            margin-top: clamp(1.5625rem, 1.189rem + 2.1341vw, 3.75rem);
+            transition: .2s all;
+
+            a{
+                padding:10px 20px;
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap:10px;
+                color:#000;
+                font-size: 14px;
+                &:hover{
+                    background-color: rgb(197, 174, 128);
+                    color: #fff;
+                    border: none;
+                }
+            }
+            img{
+                width: 16px;
+            }
         }
     }
 
@@ -678,6 +727,7 @@ main{
                     max-width: 100%;
                     width:100%;
                     height:287px;
+                    object-fit: cover;
                     // max-width:405px;
                     @include u.breakpoint-max(small){
                         height:auto;
@@ -731,6 +781,32 @@ main{
                 }
             }
         }
+    }
+
+    .address-container{
+        .address-inner-container{
+            max-width: 1000px;
+            width:100%;
+            margin-inline: auto;
+            .adr{
+                img{
+                    max-width: 80px;
+                }
+            }
+            .social{
+
+            }
+        }
+    }
+
+    .map-container{
+        position: relative;
+    .map-block{
+        margin-bottom: 60px;
+        position: relative;
+       
+    }
+    
     }
 
     .sixth-section{
@@ -1787,7 +1863,7 @@ width: 50px;
     // margin-top: clamp(4.375rem, 3.5213rem + 4.878vw, 9.375rem);
     // margin-bottom: clamp(4.375rem, 2.9878rem + 7.9268vw, 12.5rem);
     .contact-heading{
-        font-weight: 700;
+        font-weight: 400;
         font-family: "Ivy Mode", Arial, sans-serif;
         font-size: clamp(2.1875rem, 1.878rem + 1.7683vw, 4rem);
         text-align: center;
